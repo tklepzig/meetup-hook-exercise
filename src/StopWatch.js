@@ -20,7 +20,7 @@ export const StopWatch = () => {
     let seconds = rest * 60;
     rest = seconds % 1;
     seconds = parseInt(seconds);
-    const milliseconds = rest * 1000;
+    const milliseconds = Math.fround(rest * 1000);
 
     return `${pad(hours, 2)}:${pad(minutes, 2)}:${pad(seconds, 2)}.${pad(
       milliseconds,
